@@ -1,0 +1,16 @@
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px 100px;
+    background-color: rgb(111, 212, 239);
+}
+ul>li{
+    list-style: none;
+    margin: 10px auto;
+    color: rgb(10, 4, 9);
+}
+li:first-child{
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: brown !important;
+}
