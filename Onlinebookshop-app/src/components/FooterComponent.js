@@ -3,12 +3,14 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import FooterHome from "./FooterHome";
+import "./FooterComponent.css"
 
 function FooterComponent(props) {
     return (
         <>
-         <FooterHome/>
-        <div
+        
+         <div className="footer-bg">
+         <div
             className={
                 props.position === "absolute"
                     ? props.page === "Home"
@@ -17,7 +19,8 @@ function FooterComponent(props) {
                     : "footer"
             }
         >
-            <p className="copyright">@ 2023 Daram kotesh | Follow us My Website</p>
+            <p className="copyright">Online Bookstore © 2023. All Rights Reserved
+               | Follow us My Website</p>
             <ul className="footer-list">
                 <li className="footer-item">
                     <a href="#" target="_blank" rel="noreferrer">
@@ -41,6 +44,8 @@ function FooterComponent(props) {
                 </li>
             </ul>
         </div>
+       
+         </div>
         </>
     
     );

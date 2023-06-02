@@ -11,12 +11,18 @@ import DetailsPage from "../pages/DetailsPage";
 import ProfilePage from "../pages/ProfilePage";
 import OrdersPage from "../pages/OrdersPage";
 import ProtectedRoutes from "../pages/ProtectedRoutes";
+import Aboutus from "../pages/Aboutus";
+import Contactus from "../pages/Contactus";
+import Gallary from "../pages/Gallary";
 
 function BookstoreRoutes() {
     const location = useLocation();
     return (
         <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
+            <Route path="/aboutus" element={<Aboutus />} />
+            <Route path="/gallary" element={<Gallary />} />
+            <Route path="/contactus" element={<Contactus />} />
             <Route path="/auth/login" element={<LoginPage />} />
             <Route path="/auth/register" element={<RegisterPage />} />
             <Route path="/cart" element={<CartPage />} />

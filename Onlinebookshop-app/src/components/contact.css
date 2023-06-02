@@ -1,0 +1,81 @@
+.header{
+    height: 220px;
+    background-size: cover;
+    color: rgb(6, 122, 33);
+    font-family: "Roboto";
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 25px;
+
+  }
+
+.contact-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+  
+}
+
+.contact-form {
+    margin-right: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: beige;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: black;
+    color: white;
+}
+
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 340px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+}

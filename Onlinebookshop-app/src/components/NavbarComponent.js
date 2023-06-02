@@ -70,14 +70,41 @@ function NavbarComponent(props) {
                                             Home
                                         </Button>
                                     </LinkContainer>
+                                    <LinkContainer to="/aboutus">
+                                        <Button
+                                            variant="link"
+                                            className="nav-item"
+                                        >
+                                            About Us
+                                        </Button>
+                                    </LinkContainer>
+                                    <LinkContainer to="/gallary">
+                                        <Button
+                                            variant="link"
+                                            className="nav-item"
+                                        >
+                                            Gallary
+                                            
+                                        </Button>
+                                    </LinkContainer>
                                     <LinkContainer to="/books">
                                         <Button
                                             variant="link"
                                             className="nav-item"
                                         >
                                             Books
+                                            
                                         </Button>
                                     </LinkContainer>
+                                    <LinkContainer to="/contactus">
+                                        <Button
+                                            variant="link"
+                                            className="nav-item"
+                                        >
+                                            Contact Us
+                                        </Button>
+                                    </LinkContainer>
+                                    
                                     {admin && (
                                         <LinkContainer to="/users">
                                             <Button
