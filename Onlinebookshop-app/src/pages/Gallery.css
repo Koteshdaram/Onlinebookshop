@@ -1,0 +1,15 @@
+.gallary-sec img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    transition: 0.3s;
+    overflow: hidden;
+}
+.gallary-sec {
+    margin: 50px 0px;
+}
+.gallary-sec img:hover{
+   transform: scale(1.1);
+ 
+}
