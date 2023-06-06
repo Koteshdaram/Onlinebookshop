@@ -11,7 +11,7 @@
   }
 
 .contact-container {
-    margin-top: 30px;
+    margin: 50px 30px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -26,9 +26,9 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 30px;
-    background-color: #f9f9f9;
+    background-color: #20c5ea;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 }
 

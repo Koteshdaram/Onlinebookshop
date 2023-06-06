@@ -23,22 +23,22 @@ function FooterComponent(props) {
                | Follow us My Website</p>
             <ul className="footer-list">
                 <li className="footer-item">
-                    <a href="#" target="_blank" rel="noreferrer">
+                    <a href="https://www.facebook.com/login.php" target="_blank" rel="noreferrer">
                         <FaFacebookSquare />
                     </a>
                 </li>
                 <li className="footer-item">
-                    <a href="#" target="_blank" rel="noreferrer">
+                    <a href="https://twitter.com/?lang=en-in" target="_blank" rel="noreferrer">
                         <FaTwitterSquare />
                     </a>
                 </li>
                 <li className="footer-item">
-                    <a href="#" target="_blank" rel="noreferrer">
+                    <a href="https://in.linkedin.com/" target="_blank" rel="noreferrer">
                         <FaLinkedin />
                     </a>
                 </li>
                 <li className="footer-item">
-                    <a href="#" target="_blank" rel="noreferrer">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                         <FaInstagramSquare />
                     </a>
                 </li>

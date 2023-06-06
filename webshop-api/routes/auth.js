@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const router = express.Router();
+const createClient = require('./db.js');
 
 router.post('/login', function (req, res, next) {
   let users = JSON.parse(fs.readFileSync('./data/users.json', 'utf8'));
@@ -21,32 +22,28 @@ router.post('/register', function (req, res, next) {
       "username": req.body.username,
       "email": req.body.email,
       "password": req.body.password,
-      "role": "user",
-      "address": {
-        "street": "",
-        "suite": "",
-        "city": "",
-        "zipcode": ""
-      },
-      "phone": ""
     };
-    if (validateUser(user)) {
-      let verifyUser = users.find((item) => item.username == user.username || item.email == user.email);
-      if (verifyUser) {
-        res.status(403).send({ message: "User already exist." });
-      } else {
-        users.push(user);
-        fs.writeFile('./data/users.json', JSON.stringify(users), function (err) {
-          if (err) {
-            throw err;
-          } else {
-            res.send({ message: "Successfully registered" });
-          }
-        });
+    console.log("Before");
+    const client = createClient();
+    client.connect((err) => {
+      if (err) {
+        console.error('Error during connection:', err);
+        return;
       }
-    } else {
-      res.status(400).send({ message: "Bad request" });
-    }
+      console.log("Connected to database");
+
+      const insertQuery = 'INSERT INTO customers (firstname, username, email, pasword) VALUES ($1, $2, $3, $4)';
+      client.query(insertQuery, [user.name, user.username, user.email, user.password], (err, result) => {
+        if (err) {
+          console.error('Error', err);
+          return;
+        }
+        console.log('Record inserted successfully');
+        client.end(); // Close the database connection
+        res.send({ message: "Successfully registered" });
+      });
+    });
+    console.log("after");
   } else {
     res.status(400).send({ message: "Please complete all fields" });
   }

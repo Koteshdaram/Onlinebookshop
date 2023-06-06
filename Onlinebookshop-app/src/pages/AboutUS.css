@@ -2,3 +2,6 @@
 background-color: blue;
 
 }
+.text-sec{
+    box-shadow: 0 6px 20px 0 rgba(106, 106, 106, 0.19) !important;  
+}

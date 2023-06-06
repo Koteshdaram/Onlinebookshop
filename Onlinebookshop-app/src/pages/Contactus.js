@@ -1,5 +1,3 @@
-import Button from "react-bootstrap/esm/Button";
-import { LinkContainer } from "react-router-bootstrap";
 import FooterComponent from "../components/FooterComponent";
 import NavbarComponent from "../components/NavbarComponent";
 import FooterHome from "../components/FooterHome";
@@ -27,7 +25,7 @@ function HomePage() {
             <NavbarComponent cartItemsNumber={cartItemsNumber} />
             <>
 
-            I am in Contact Us page
+            Welcome to contact page
             <ContactUs/>
                            <FooterHome/>
                             <FooterComponent/>    

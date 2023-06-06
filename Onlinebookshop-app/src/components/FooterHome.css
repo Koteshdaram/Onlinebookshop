@@ -1,7 +1,7 @@
 footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 0px 0px !important;
+    padding: 30px 0px !important;
     background-color: rgb(111, 212, 239);
 }
 ul>li{

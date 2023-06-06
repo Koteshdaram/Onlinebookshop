@@ -19,6 +19,6 @@
     color: yellow;
 }
 
-.container-footer {
-    height: calc(100vh - 66px - 72px - 200px)
+.details-footer{
+    margin-top: 50px;
 }
