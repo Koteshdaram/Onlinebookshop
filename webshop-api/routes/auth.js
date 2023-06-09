@@ -3,15 +3,39 @@ const fs = require('fs');
 const router = express.Router();
 const createClient = require('./db.js');
 
-router.post('/login', function (req, res, next) {
-  let users = JSON.parse(fs.readFileSync('./data/users.json', 'utf8'));
-  let user = users.find(user => user.email === req.body.email && user.password === req.body.password);
-  if (user) {
-    res.status(200).json(user);
-  } else {
-    res.status(404).send({ message: "404 Not Found" });
-  }
+// router.post('/login', fcc (req, res, next) {
+//   let users = JSON.parse(fs.readFileSync('./data/users.json', 'utf8'));
+//   let user = users.find(user => user.email === req.body.email && user.password === req.body.password);
+//   if (user) {
+//     res.status(200).json(user);
+//   } else {
+//     res.status(404).send({ message: "Password and email not valid" });
+//   }
+// });
+router.post('/login', function (req, res) {
+
+  // Query the database for the user with the provided credentials
+  const client = createClient();
+  client.connect((err) => {
+    if (err) {
+      console.error('Error during connection:', err);
+      return;
+    }
+    console.log("Connected to database");
+    const insertQuery='SELECT * FROM customers WHERE email = $1 AND pasword = $2';
+    client.query(insertQuery, [req.body.email, req.body.password], (err, result) => {
+      if (err) {
+        console.error('Error', err);
+        return;
+      }
+      console.log('Record inserted successfully');
+      client.end(); // Close the database connection
+      res.send({ message: "login Successfully" });
+    });
+  });
+  console.log("after");
 });
+
 
 router.post('/register', function (req, res, next) {
   let users = JSON.parse(fs.readFileSync('./data/users.json', 'utf8'));

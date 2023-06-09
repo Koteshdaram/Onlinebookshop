@@ -24,8 +24,6 @@ function HomePage() {
         <>
             <NavbarComponent cartItemsNumber={cartItemsNumber} />
             <>
-
-            Welcome to contact page
             <ContactUs/>
                            <FooterHome/>
                             <FooterComponent/>    

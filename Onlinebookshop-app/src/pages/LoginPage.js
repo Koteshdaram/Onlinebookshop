@@ -47,26 +47,22 @@ function LoginPage() {
                 },
                 body: JSON.stringify({
                     email: inputs.email,
-                    password: inputs.password
+                    pasword: inputs.password
                 })
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    if (!data.message) {
+                    if (data.message === "login Successfully") {
+                        console.log('success')
                         setError(false);
-                        localStorage.setItem("user_username", data.username);
-                        localStorage.setItem("user_id", data.id);
-                        localStorage.setItem("user_role", data.role);
                         setShow(true);
                         setTimeout(() => {
-                            navigate("/");
+                            navigate("/Pages/HomePage");
                         }, 3000);
                     } else {
+                        console.log('fail')
                         setError(true);
                         setInputs({ ...inputs, password: "" });
-                        localStorage.removeItem("user_username");
-                        localStorage.removeItem("user_id");
-                        localStorage.removeItem("user_role");
                         setShow(true);
                     }
                 })

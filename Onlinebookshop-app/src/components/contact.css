@@ -23,13 +23,15 @@
 .contact-form {
     margin-right: 20px;
     width: 100%;
-    max-width: 400px;
     margin: 0 auto;
     padding: 30px;
     background-color: #20c5ea;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
+}
+iframe{
+    max-width: none !important;
 }
 
 .form-group {
@@ -41,15 +43,16 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     color: #555;
 }
 
-.form-group input {
+.form-group input, .form-group textarea {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: none;
+    height: 35px;
 }
 
 .form-group input:focus {
@@ -74,8 +77,16 @@ button[type="submit"]:hover {
 iframe {
     width: 100%;
     max-width: 600px;
-    height: 340px;
+    height: 600px;
     margin-top: 20px;
     border: none;
     border-radius: 20px;
+}
+.contact-form-sec{
+    width: 550px;
+    margin:50px auto;
+    padding: 30px;
+    background-color: #20c5ea;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
 }

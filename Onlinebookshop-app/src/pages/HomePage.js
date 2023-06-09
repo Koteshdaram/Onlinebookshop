@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "../css/HomePage.css";
+import FooterHome from "../components/FooterHome";
+
 
 
 function HomePage() {
@@ -48,7 +50,7 @@ function HomePage() {
                 </main>
                
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-              
+              <FooterHome/>
                 <FooterComponent/>
                 
             </>
